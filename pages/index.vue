@@ -15,6 +15,6 @@ onMounted(() => {
 <template>
   <div>this is the home</div>
   <div v-for="(data, index) in data">
-    <NuxtImg :src="data?.Picture[0]" width="100" height="100" alt="menu ite" />
+    <NuxtImg :src="data?.Picture[0]" width="100" height="100" alt="menu item" />
   </div>
 </template>
