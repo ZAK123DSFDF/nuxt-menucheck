@@ -1,9 +1,10 @@
-<script setup lang="ts">
+<script setup>
 const { data } = await useFetch(
   "https://fullstack-food-order.onrender.com/menu/all"
 );
 onMounted(() => {
   console.log(
+    //@ts-ignore
     data?.value.map((value) => {
       return value.Picture;
     })
@@ -14,6 +15,6 @@ onMounted(() => {
 <template>
   <div>this is the home</div>
   <div v-for="(data, index) in data">
-    <NuxtImg :src="data.Picture[0]" width="100" height="100" alt="menu item" />
+    <NuxtImg :src="data?.Picture[0]" width="100" height="100" alt="menu ite" />
   </div>
 </template>
